@@ -25,7 +25,7 @@ let myDate = new Date()
 //How to do it?
 
 let myTimeStamp = Date.now()
-console.log(myTimeStamp.toLocaleString())
+console.log(myTimeStamp.toLocaleString() ,"Older")
 
 let newDate = new Date()
 console.log(newDate)

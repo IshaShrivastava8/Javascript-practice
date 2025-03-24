@@ -17,7 +17,7 @@
 // console.log("Result:" , result)
 
 
-function loginUserMessage(userName = "Sam"){
+function loginUserMessage(userName = "Sam"){ //deafult value
     if(userName){
     return `${userName} just logged In`
     }
