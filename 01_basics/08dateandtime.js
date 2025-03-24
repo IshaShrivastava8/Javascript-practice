@@ -31,5 +31,7 @@ let newDate = new Date()
 console.log(newDate)
 console.log(newDate.getMonth()+1)
 
-
+// Digital clock
+console.log(myDate.toTimeString()) // 24 hour format
+console.log(myDate.toLocaleTimeString())  // 12 hour format
 
