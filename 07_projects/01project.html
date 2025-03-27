@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 5px;
+            border-color: black;
+            border-style: dotted;
+            color: white; /* Ensures text is visible */
+            font-weight: bold;
+        }
+    
+        /* Set background color based on ID */
+        #grey { background-color: grey; }
+        #white { background-color: white; }
+        #blue { background-color: blue; }
+        #green{ background-color: darkgreen; }
+    </style>
+</head>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="green"></span>
+    <h2>Try clicking on the colors above to change the background color!</h2>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".button")
+    const body = document.querySelector('body')
+
+    buttons.forEach(function(button){
+        console.log(button);
+        button.addEventListener('click',function(e){
+          console.log(e)  
+          console.log(e.target)
+          switch(e.target.id){
+            case "grey": document.querySelector('body').style.backgroundColor = e.target.id;
+            break;
+            case "white": document.querySelector('body').style.backgroundColor = e.target.id;
+            break;
+            case "blue": document.querySelector('body').style.backgroundColor = e.target.id;
+            break;
+            case "green": document.querySelector('body').style.backgroundColor = e.target.id;
+            break;
+          
+    }})
+});
+</script>
+</html>
