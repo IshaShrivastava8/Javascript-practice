@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+       const listItem =  document.createElement('li')
+       listItem.innerHTML =`${langName}`
+       document.querySelector('.language').appendChild(listItem)
+
+    }
+    addLang("Python")
+    addLang("C++")
+    //Not a good way has to append tree each time so time consuming
+
+    function addOptiLang(langName){
+        const listItem = document.createElement('li')
+        listItem.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(listItem)
+    }
+
+    addOptiLang("Golang")
+
+//     innerHTML can cause unexpected overwrites if misused.
+
+// createTextNode is cleaner and safer, making the code more maintainable.
+
+// Conclusion
+// ✅ addOptiLang(langName) is the better choice because it is faster, safer, and more reliable.
+
+
+//Editing
+const secondLang = document.querySelector('li:nth-child(2)')
+secondLang.innerHTML = 'Mojo'
+//  secondLang.textContent = 'Mojo'
+
+const newLi = document.createElement('li')
+newLi.textContent = "Flutter"
+secondLang.replaceWith(newLi)
+
+
+//editing
+const firstChild = document.querySelector('li:first-child')
+// const newFirst = document.createElement('li')
+// newFirst.textContent = "Typescript"
+// firstChild.replaceWith(newFirst)
+
+//editing
+firstChild.outerHTML='<li>React</li>'
+
+//editing
+const thirdChild = document.querySelector('li:nth-child(3)')
+const newThird = document.createElement('li')
+newThird.textContent = "Angular"
+
+const parent = thirdChild.parentNode
+parent.replaceChild(newThird,thirdChild)
+
+
+// const thirdChild = document.querySelector('li:nth-child(3)');
+// const newThird = document.createElement('li');
+// newThird.textContent = "English";
+
+// const parent = document.querySelector('.language');
+// parent.replaceChild(newThird, thirdChild);
+
+//Removing
+const lastChild = document.querySelector('li:last-child')
+lastChild.remove();
+</script>
+</html>
