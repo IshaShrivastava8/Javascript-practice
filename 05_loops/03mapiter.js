@@ -32,5 +32,5 @@ for (const[ key,value] of map) {
     
 // }
 
-//So maps are iterable like this objects aare not
+//So maps are iterable like this objects are not
 
