@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+  
+    .color {
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+  
+    table {
+      border-collapse: collapse;
+      width: 400px;
+      margin-top: 10px;
+    }
+  
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+  
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div id="project">
+    <div id="insert">
+      <div id="key">Press Key and watch the magic unfold!</div>
+    </div>
+  </div>
+</body>
+<script>
+  const insert = document.getElementById("insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
+    <div class="color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>KeyCode</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key === ' ' || e.key === '' ? 'Space bar' : e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+    </div>
+  `;
+});
+
+</script>
+
+</html>
