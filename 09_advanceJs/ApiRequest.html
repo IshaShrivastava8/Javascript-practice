@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: beige;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="" alt="" id="Image">
+        <p id="Name"></p>
+    </div>
+</body>
+    <script>
+        const addImage= document.querySelector('#Image')
+        const addName = document.querySelector('#Name')
+        const requestUrl = 'https://api.github.com/users/IshaShrivastava8'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText)
+                const name =  data.login
+                const image = data.avatar_url
+
+                 addImage.src = image
+                addName.innerHTML = name
+            }
+        }
+        xhr.send()
+    </script>
+    
+
+</html>
