@@ -31,8 +31,11 @@ code();
 // Arrow Functions
 
 const arrowFunc = () => {
+    console.log(this);
     console.log("Arrow func")
 }
+
+arrowFunc();
 const addTwoNumbers= (num1,num2) => {
    return num1+num2
 }

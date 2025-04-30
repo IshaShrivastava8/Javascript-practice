@@ -4,7 +4,7 @@
 //     console.log(val);  
 // }
 
-//name is a keyword here so it shoes dpricated
+// name is a keyword here so it shows depricated
 // const userName = "Isha Shrivastava"
 
 // for( const val of userName){

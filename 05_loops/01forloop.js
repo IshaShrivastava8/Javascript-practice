@@ -2,8 +2,8 @@
 
 // for (let index = 0; index <10; index++) {
 //     const element = index;
-//     console.log(element);   
-// }
+// //     console.log(element);   
+// // }
 
 // for (let i = 1; i <= 2; i++) {
 //     console.log("Outer loop value"+ i);
@@ -44,6 +44,8 @@ for (let index = 0; index < 10; index++) {
 for( let index = 1 ;index<4;index++){
     console.log(index)
 }
+
+
 
 
 

@@ -18,10 +18,10 @@ const myArr = ["javscript ","c++","ruby","python","java"]
 // myArr.forEach(printMe)
 
 
-// myArr.forEach(function (item,index,arr){
-// console.log(item,index,arr);
+myArr.forEach(function (item,index,arr){
+console.log(item,index,arr);
 
-// })
+})
 
 const myCoding = [
     {
@@ -38,6 +38,10 @@ const myCoding = [
     }
 ]
 
-myCoding.forEach((item)=>{
-console.log(item.languageName)
-})
+// myCoding.forEach((item)=>{
+// console.log(item.languageFileName)
+// })
+
+// myArr.forEach((item)=>{
+//     console.log(item);
+// })

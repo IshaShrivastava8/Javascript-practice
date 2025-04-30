@@ -2,7 +2,7 @@
     //named iife
     console.log(`Db connected`)
 })(); //semicolon here it is imp
-// Immediately Invoked s that the variables dont get plluted by global scope
+// Immediately Invoked so that the variables dont get polluted by global scope
 
 ((name) =>{
     console.log(`Db connected ${name}`)
